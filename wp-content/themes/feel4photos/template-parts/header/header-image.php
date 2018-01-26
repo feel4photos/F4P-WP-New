@@ -3,7 +3,7 @@
  * Displays header media
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Feel4_Photos
  * @since 1.0
  * @version 1.0
  */

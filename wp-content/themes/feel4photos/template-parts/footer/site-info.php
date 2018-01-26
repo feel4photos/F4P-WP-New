@@ -3,12 +3,12 @@
  * Displays footer site info
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Feel4_Photos
  * @since 1.0
  * @version 1.0
  */
 
 ?>
 <div class="site-info">
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyseventeen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyseventeen' ), 'WordPress' ); ?></a>
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'feel4photos' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'feel4photos' ), 'WordPress' ); ?></a>
 </div><!-- .site-info -->

@@ -3,7 +3,7 @@
  * Displays header site branding
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Feel4_Photos
  * @since 1.0
  * @version 1.0
  */
@@ -30,8 +30,8 @@
 			<?php endif; ?>
 		</div><!-- .site-branding-text -->
 
-		<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
-		<a href="#content" class="menu-scroll-down"><?php echo twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'twentyseventeen' ); ?></span></a>
+		<?php if ( ( feel4photos_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
+		<a href="#content" class="menu-scroll-down"><?php echo feel4photos_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'feel4photos' ); ?></span></a>
 	<?php endif; ?>
 
 	</div><!-- .wrap -->

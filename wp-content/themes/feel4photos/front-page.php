@@ -7,7 +7,7 @@
  * Learn more: https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Feel4_Photos
  * @since 1.0
  * @version 1.0
  */
@@ -16,6 +16,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+		front page
 
 		<?php // Show the selected frontpage content.
 		if ( have_posts() ) :
@@ -28,7 +29,7 @@ get_header(); ?>
 
 		<?php
 		// Get each of our panels and show the post data.
-		if ( 0 !== twentyseventeen_panel_count() || is_customize_preview() ) : // If we have pages to show.
+		if ( 0 !== feel4photos_panel_count() || is_customize_preview() ) : // If we have pages to show.
 
 			/**
 			 * Filter number of front page sections in Twenty Seventeen.
@@ -37,16 +38,16 @@ get_header(); ?>
 			 *
 			 * @param int $num_sections Number of front page sections.
 			 */
-			$num_sections = apply_filters( 'twentyseventeen_front_page_sections', 4 );
-			global $twentyseventeencounter;
+			$num_sections = apply_filters( 'feel4photos_front_page_sections', 4 );
+			global $feel4photoscounter;
 
 			// Create a setting and control for each of the sections available in the theme.
 			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-				$twentyseventeencounter = $i;
-				twentyseventeen_front_page_section( null, $i );
+				$feel4photoscounter = $i;
+				feel4photos_front_page_section( null, $i );
 			}
 
-	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here. ?>
+	endif; // The if ( 0 !== feel4photos_panel_count() ) ends here. ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
