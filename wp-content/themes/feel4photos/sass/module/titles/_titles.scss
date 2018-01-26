@@ -1,0 +1,84 @@
+// F4P titles partial
+
+// titles
+.c-title {
+    position: relative;
+    &.c-title--border-bottom {
+        margin-bottom: $all-zero + 25;
+        padding-bottom: $all-zero + 25;
+        &:after {
+            bottom: $all-zero;
+            display: block;
+            height: $all-zero + 2;
+            left: $all-zero;
+            position: absolute;
+            width: $all-zero + 40;
+        }
+    }
+    &.c-title--border-top {
+        @extend .c-title--border-bottom;
+        padding: $all-zero + 10 $all-zero $all-zero + 5;
+        &:after {
+            top: $all-zero;
+        }
+    }
+    &.c-title--border-middle {
+        @extend .c-title--border-bottom;
+        &:after {
+            left: $f4p-grid-width-100 / 2;
+            @include translateX(-$f4p-grid-width-100 /2);
+        }
+    }
+    &.c-title--border-right {
+        @extend .c-title--border-bottom;
+        &:after {
+            left: inherit;
+            right: $all-zero;
+        }
+    }
+    &.c-title--border-base-color {
+        &:after {
+            background-color: $f4p-base-color;
+        }
+    }
+    &.c-title--border-hlight-color {
+        &:after {
+            background-color: $f4p-hlight-tone;
+        }
+    }
+    span {
+        display: block;
+        font-weight: 100;
+    }
+    &.c-portfolio__title {
+        z-index: 10;
+    }
+    &.c-clients__title {
+        @extend .c-portfolio__title;
+    }
+    &.c-title--type3 {
+
+    }
+}
+
+
+.c-title--banner {
+    span {
+        letter-spacing: $all-zero + 4;
+        margin-top: $all-zero + 23;
+        padding-top: $all-zero + 20 !important;
+    }
+}
+
+.c-crisp-title {
+    font-family: $srcsanspro-font-family;
+    font-weight: 100;
+}
+
+.c-hcontact {
+    &__title {
+        font-weight: 200;
+    }
+}
+
+

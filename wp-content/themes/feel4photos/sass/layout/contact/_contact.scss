@@ -1,0 +1,13 @@
+// F4P contact partial
+
+.c-contact {
+    &--slice {
+        @media #{$large-and-up} {
+            padding: $all-zero + 130 $all-zero + 50;
+        }
+    }
+}
+
+
+
+

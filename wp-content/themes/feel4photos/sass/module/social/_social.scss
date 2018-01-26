@@ -1,0 +1,30 @@
+// F4P social partial
+
+.c-social {
+    z-index: 5;
+    a {
+        font-size: $all-zero + 18;
+        margin-right: $all-zero + 15;
+        &:last-child {
+            margin-right: $all-zero;
+        }
+    }
+    &.c-social--bottom {
+        bottom: $all-zero + 90;
+        @extend .u-width100;
+        @extend .center-align;
+    }
+    &.c-social--bloglist {
+        margin-top: $all-zero + 20;
+        a {
+            color: $f4p-grey-tone-l1;
+            &:hover {
+                color: $f4p-grey-color;
+            }
+        }
+    }
+    &.c-social--related-post {
+        right: $all-zero + 30;
+        top: $all-zero + 30;
+    }
+}

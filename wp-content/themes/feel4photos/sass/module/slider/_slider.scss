@@ -1,0 +1,22 @@
+// slider partial
+
+.c-slider {
+    .slick-arrow {
+        z-index: 5;
+    }
+    .slick-next{
+        right: $all-zero + 30;
+    }
+    .slick-prev{
+        left: $all-zero + 30;
+    }
+    .slick-list{
+        height: $f4p-grid-height-100;
+    }
+    .slick-track{
+        @extend .slick-list;
+    }
+    .slick-dots{
+        bottom: 0;
+    }
+}

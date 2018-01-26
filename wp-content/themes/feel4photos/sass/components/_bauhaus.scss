@@ -1,0 +1,11 @@
+@font-face {
+    font-family: $bauhaus-font-family;
+    src: url('#{$bauhaus-font-path}BauhausITCbyBT-Light.eot');
+    src: local('Bauhaus Light BT'), local('BauhausITCbyBT-Light'),
+        url('#{$bauhaus-font-path}BauhausITCbyBT-Light.eot?#iefix') format('embedded-opentype'),
+        url('#{$bauhaus-font-path}BauhausITCbyBT-Light.woff') format('woff'),
+        url('#{$bauhaus-font-path}BauhausITCbyBT-Light.ttf') format('truetype');
+    font-weight: $font-light;
+    font-style: normal;
+}
+

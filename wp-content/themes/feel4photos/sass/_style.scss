@@ -1,0 +1,42 @@
+// F4P main stylesheet partial
+
+// F4P base
+@import "base/var";
+@import "base/utilities-all";
+@import "base/colorscheme";
+@import "base/typography";
+
+// F4P layout
+@import "layout/layout";
+@import "layout/header/header";
+@import "layout/footer/footer";
+@import "layout/about/about";
+@import "layout/post/article";
+@import "layout/post/related-posts";
+@import "layout/contact/contact";
+@import "layout/portfolio/portfolio";
+
+// F4P module
+@import "module/logo/logo";
+@import "module/menu/menu";
+@import "module/social/social";
+@import "module/titles/titles";
+@import "module/preloader/preloader";
+@import "module/swipebox/swipebox";
+
+// F4P module fontawesome
+@import "module/icon/font-awesome";
+
+// F4P module slider
+@import "module/slider/swiper";
+@import "module/slider/slick";
+@import "module/slider/slick-theme";
+@import "module/slider/slider";
+
+// F4P state
+
+// F4P theme
+
+
+
+

@@ -1,0 +1,10 @@
+// F4P logo partial
+
+.o-logo {
+    width: $all-zero + 200;
+    @extend .u-display-in-block;
+    @media #{$large-and-up} {
+        width: $all-zero + 275;
+    }
+}
+

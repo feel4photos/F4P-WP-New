@@ -1,0 +1,125 @@
+
+
+.u-bauhaus-ffamily {
+    font-family: $bauhaus-font-family;
+    letter-spacing: $all-zero + 2;
+}
+.u-gotham-ffamily {
+    font-family: $gotham-font-family;
+}
+
+.u-timesnwrman-ffamily {
+    font-family: $timesnwroman-font-family;
+}
+
+a {
+  text-decoration: none;
+  @extend .u-transition-all;
+}
+
+html{
+  line-height: 1.5;
+
+  @media only screen and (min-width: 0) {
+    font-size: $body-font-size;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: $body-font-size + 1;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: $body-font-size + 1;
+  }
+
+  font-family: $srcsanspro-font-family;
+  font-weight: $font-light;
+  color: $off-black;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ html {
+        font-weight: $font-normal;
+    }
+}
+
+// Header Styles
+h1, h2, h3, h4, h5, h6 { @extend .u-gotham-ffamily; font-weight: $font-medium;
+line-height: 1.1;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+
+// Header Styles
+$h1-fontsize: $all-zero + 28 !default;
+$h2-fontsize: $all-zero + 24 !default;
+$h3-fontsize: $all-zero + 20 !default;
+$h4-fontsize: $all-zero + 18 !default;
+$h5-fontsize: $all-zero + 16 !default;
+$h6-fontsize: $all-zero + 14 !default;
+
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5) 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5) 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
+
+// Text Styles
+em { font-style: italic; }
+strong { font-weight: $font-demi-bold; }
+small { font-size: 75%; }
+.light { font-weight: $font-light; }
+.thin { font-weight: $font-extra-light; }
+
+p {
+    margin-bottom: $all-zero + 20;
+}
+
+
+.flow-text{
+  font-weight: $font-light;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 1.2rem * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+}
+
+// Quoted text
+.u-quotetxt {
+    @extend .u-timesnwrman-ffamily;
+    font-size: $all-zero + 16;
+    padding-bottom: $all-zero + 10 !important;
+}
+// Larger text
+.u-exlargetxt {
+    font-size: $all-zero + 30;
+    font-weight: $font-demi-bold;
+    letter-spacing: $all-zero + 3;
+    line-height: $all-zero + 36;
+}
+// Large text
+.u-largetxt {
+    font-size: $all-zero + 22;
+    line-height: $all-zero + 28;
+}
+// Sub Titles
+.u-smallertxt {
+    font-size: $all-zero + 14;
+}
+// Large first-letter
+.u-large-1st-lettr {
+    p{
+        &:first-letter {
+        font-size: $h2-fontsize;
+        }
+    }
+}
+
+

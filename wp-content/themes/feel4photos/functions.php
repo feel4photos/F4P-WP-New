@@ -180,7 +180,7 @@ function feel4photos_setup() {
 		'nav_menus' => array(
 			// Assign a menu to the "top" location.
 			'top' => array(
-				'name' => __( 'Top Menu', 'feel4photos' ),
+				'name' => __( 'Main Navigation', 'feel4photos' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -413,7 +413,7 @@ function feel4photos_scripts() {
 	wp_enqueue_style( 'feel4photos-fonts', feel4photos_fonts_url(), array(), null );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'feel4photos-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'feel4photos-style', get_theme_file_uri( '/css/materialize.css' ));
 
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {

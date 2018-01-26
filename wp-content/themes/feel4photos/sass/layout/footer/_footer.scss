@@ -1,0 +1,19 @@
+// F4P footer partial
+
+footer {
+    p {
+        @extend .u-no-margin;
+    }
+}
+
+.c-footer {
+    &__copyright {
+        font-size: $all-zero + 12;
+        margin: $all-zero + 15 $all-zero;
+    }
+}
+
+.u-footer-gap {
+    margin-bottom: $all-zero + 25;
+}
+
