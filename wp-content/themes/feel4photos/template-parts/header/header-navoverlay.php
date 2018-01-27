@@ -20,7 +20,7 @@
             </a>
         </div><!-- / logo -->
         <p>
-            <a href="mailto:contact@feel4photos.com" title="contact@feel4photos.com" class="u-linkhlight">contact@feel4photos.com</a>
+            <a href="mailto:<?php echo get_option('emailLink1');?>" title="<?php echo get_option('emailLink1');?>" class="u-linkhlight"><?php echo get_option('emailLink1');?></a>
         </p>
         <ul>
             <li class="u-linkhlight"><a href="tel:9830027039">9830027039</a></li>
@@ -28,12 +28,12 @@
             <li class="u-linkhlight"><a href="tel:7044443318">7044443318</a></li>
         </ul>
         <div class="c-footer__copyright u-uppercase u-txtgrey">
-            <p>copyright &copy; 2018 feel4photos</p>
+            <p>copyright &copy; <?php the_time('Y'); ?> <?php bloginfo('name'); ?></p>
         </div><!-- / footer copyright -->
         <div class="c-social">
-            <a href="https://www.facebook.com/feel4photos" target="_blank" class="u-linkbase social facebook"><i class="fa fa-facebook"></i></a>
+            <a href="<?php echo get_option('facebook_link');?>" target="_blank" class="u-linkbase social facebook"><i class="fa fa-facebook"></i></a>
             <!-- <a href="javascript:void(0);" class="u-linkbase social twitter"><i class="fa fa-twitter"></i></a> -->
-            <a href="https://www.instagram.com/feel4photos/" target="_blank" class="u-linkbase social instagram"><i class="fa fa-instagram"></i></a>
+            <a href="<?php echo get_option('instagram_link');?>" target="_blank" class="u-linkbase social instagram"><i class="fa fa-instagram"></i></a>
         </div>
     </section><!-- / left column -->
     <?php get_template_part( 'template-parts/header/header', 'nav' ); ?><!-- / header nav partial -->

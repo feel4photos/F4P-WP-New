@@ -162,7 +162,7 @@ add_option('social_link','');
       <td>Mobile Number 1st to link</td>
       <td><input type="text" name="moblink1" id="moblink1" value="<?php echo get_option('mobileNumber1Link');?>" style="width: 80%;" /></td>
     </tr>
-    
+
     <tr>
       <td>Mobile Number 2nd</td>
       <td><input type="text" name="mobno2" id="mobno2" value="<?php echo get_option('mobileNumber2');?>" style="width: 80%;" /></td>
@@ -182,7 +182,7 @@ add_option('social_link','');
       </td>
     </tr>
   </table>
-  
+
   <?php /*?><h3>Social Icons</h3>
   <table class="form-table" id="socialicon_table">
     <?php
@@ -250,7 +250,7 @@ add_option('social_link','');
 		?>
   </table>
   <a href="javascript:void(0);" onclick="append_tr();">Add More Social Links</a><?php */?>
-  
+
   <h3>Social Icons</h3>
   <table class="form-table" id="socialicon_table">
   	<tr>
@@ -259,12 +259,12 @@ add_option('social_link','');
       </td>
     </tr>
     <tr>
-      <td>Youtube</td>
-      <td colspan="4"><input type="text" name="youtubelink" id="youtubelink" value="<?php echo get_option('youtube_link');?>" placeholder="Youtube link" style="width: 80%; margin-bottom: 10px;" />
+      <td>Instagram</td>
+      <td colspan="4"><input type="text" name="instagramlink" id="instagramlink" value="<?php echo get_option('instagram_link');?>" placeholder="Instagram link" style="width: 80%; margin-bottom: 10px;" />
       </td>
     </tr>
   </table>
-  
+
   <h3>Photography Courtesy Info</h3>
   <table class="form-table">
     <tr>
@@ -281,7 +281,7 @@ add_option('social_link','');
       <td colspan="5"></td>
     </tr>
   </table>
-  
+
   <h3>Design & Development Credit Info</h3>
   <table class="form-table">
     <tr>
@@ -326,14 +326,14 @@ add_option('social_link','');
 	{
 		add_option('photo_curt','');
 	}
-	
-	
+
+
 	$fetchoption4=get_option('shortInfo');
 	if(empty($fetchoption4))
 	{
 		add_option('shortInfo','');
 	}
-	
+
 	$fetchoption5=get_option('residence');
 	if(empty($fetchoption5))
 	{
@@ -362,11 +362,11 @@ add_option('social_link','');
 
 			if($socialfile['name'][$i]!='')
 
-			{			
+			{
 
-			$new_file=uniqid().'_'.str_replace(' ','_',$socialfile['name'][$i]); 
+			$new_file=uniqid().'_'.str_replace(' ','_',$socialfile['name'][$i]);
 
-			$getfile[]=$new_file;           
+			$getfile[]=$new_file;
 
             move_uploaded_file($socialfile['tmp_name'][$i],'../wp-content/uploads/social_icon/'.$new_file);
 
@@ -452,12 +452,12 @@ add_option('social_link','');
 
 		if ( ! function_exists( 'wp_handle_upload' ) )
 
-			require_once( ABSPATH . 'wp-admin/includes/file.php' );		
-		
+			require_once( ABSPATH . 'wp-admin/includes/file.php' );
+
 		$logoimage = $_FILES['logo'];
 		$logomobile = $_FILES['mobilelogo'];
-		$blogHdrImg = $_FILES['blogheaderimg'];	
-		$siteFvIc = $_FILES['siteFavIcon'];	
+		$blogHdrImg = $_FILES['blogheaderimg'];
+		$siteFvIc = $_FILES['siteFavIcon'];
 		$upload_overrides = array( 'test_form' => false );
 
 		$movefile1 = wp_handle_upload( $logoimage, $upload_overrides ); //file uploaded
@@ -465,10 +465,10 @@ add_option('social_link','');
 		$movefile2 = wp_handle_upload( $logomobile, $upload_overrides ); //file uploaded
 
 		$movefile3 = wp_handle_upload( $blogHdrImg, $upload_overrides ); //file uploaded
-		
+
 		$movefile4 = wp_handle_upload( $siteFvIc, $upload_overrides ); //file uploaded
 
-		
+
 		if(!empty($siteFvIc['name']))
 
 		{
@@ -485,7 +485,7 @@ add_option('social_link','');
 
 			else if(!empty($siteFvIc['name']) && ($siteFav_val!= ''))
 
-			{		   
+			{
 
 			   update_option( 'site_favicon', $movefile4['url'] );
 
@@ -493,7 +493,7 @@ add_option('social_link','');
 
 		}
 
-		
+
 
 		if(!empty($logoimage['name']))
 
@@ -511,7 +511,7 @@ add_option('social_link','');
 
 			else if(!empty($logoimage['name']) && ($logo_val!= ''))
 
-			{		   
+			{
 
 			   update_option( 'header_logo', $movefile1['url'] );
 
@@ -519,7 +519,7 @@ add_option('social_link','');
 
 		}
 
-		
+
 
 		if(!empty($logomobile['name']))
 
@@ -537,7 +537,7 @@ add_option('social_link','');
 
 			else if(!empty($logomobile['name']) && ($logomobile_val!= ''))
 
-			{		   
+			{
 
 			   update_option( 'logo_mobile', $movefile2['url'] );
 
@@ -545,7 +545,7 @@ add_option('social_link','');
 
 		}
 
-		
+
 
 		if(!empty($blogHdrImg['name']))
 
@@ -563,7 +563,7 @@ add_option('social_link','');
 
 			else if(!empty($blogHdrImg['name']) && ($blghdrimage_val!= ''))
 
-			{		   
+			{
 
 			   update_option( 'blog_header_img', $movefile3['url'] );
 
@@ -579,17 +579,17 @@ add_option('social_link','');
 		$ytube_link = get_option( 'youtube_link' );
 
 		$clientName = get_option ('clntName');
-		
+
 		$phoneNo = get_option ('phoneNumber');
 		$phoneNoLnk = get_option ('phoneNumberLink');
 		$mobNo1 = get_option ('mobileNumber1');
 		$mobNo1Lnk = get_option ('mobileNumber1Link');
 		$mobNo2 = get_option ('mobileNumber2');
 		$mobNo2Lnk = get_option ('mobileNumber2Link');
-		
+
 		$emailid1 = get_option ('emailLink1');
 		$emailid2 = get_option ('emailLink2');
-		
+
 		$weblink = get_option ('webLink');
 
 
@@ -601,7 +601,7 @@ add_option('social_link','');
 
 			   }
 
-		/*if(empty($twitt_link)) {
+		if(empty($twitt_link)) {
 
 			delete_option( 'twitt_link' );
 
@@ -612,7 +612,7 @@ add_option('social_link','');
 					update_option( 'twitt_link', $twittlink );
 
 			   }
-			   
+
 		if(empty($instagram_link)) {
 
 			delete_option( 'instagram_link' );
@@ -635,7 +635,7 @@ add_option('social_link','');
 
 					update_option( 'pinterest_link', $pinterestlink );
 
-			   }*/
+			   }
 
 		if(empty($ytube_link)) {
 			delete_option( 'youtube_link' );
@@ -644,13 +644,13 @@ add_option('social_link','');
 			update_option( 'youtube_link', $youtubelink );
 
 			   }
-		
+
 		if(empty($clientName)) {
 			delete_option( 'clntName' );
 			add_option( 'clntName', $cName, '', 'yes' );
 		} else {
 			update_option( 'clntName', $cName );
-		
+
 		}
 
 		if(empty($phoneNo)) {
@@ -659,63 +659,63 @@ add_option('social_link','');
 		} else {
 			update_option( 'phoneNumber', $phoneno );
 		}
-		
+
 		if(empty($phoneNoLnk)) {
 			delete_option( 'phoneNumberLink' );
 			add_option( 'phoneNumberLink', $phonelink, '', 'yes' );
 		} else {
 			update_option( 'phoneNumberLink', $phonelink );
 		}
-		
+
 		if(empty($mobNo1)) {
 			delete_option( 'mobileNumber1' );
 			add_option( 'mobileNumber1', $mobno1, '', 'yes' );
 		} else {
 			update_option( 'mobileNumber1', $mobno1 );
 		}
-		
+
 		if(empty($mobNo1Lnk)) {
 			delete_option( 'mobileNumber1Link' );
 			add_option( 'mobileNumber1Link', $moblink1, '', 'yes' );
 		} else {
 			update_option( 'mobileNumber1Link', $moblink1 );
 		}
-		
+
 		if(empty($mobNo2)) {
 			delete_option( 'mobileNumber2' );
 			add_option( 'mobileNumber2', $mobno2, '', 'yes' );
 		} else {
 			update_option( 'mobileNumber2', $mobno2 );
 		}
-		
+
 		if(empty($mobNo2Lnk)) {
 			delete_option( 'mobileNumber2Link' );
 			add_option( 'mobileNumber2Link', $moblink2, '', 'yes' );
 		} else {
 			update_option( 'mobileNumber2Link', $moblink2 );
 		}
-				
+
 		if(empty($emailid1)) {
 			delete_option( 'emailLink1' );
 			add_option( 'emailLink1', $email1st, '', 'yes' );
 		} else {
 			update_option( 'emailLink1', $email1st );
 		}
-		
+
 		if(empty($emailid2)) {
 			delete_option( 'emailLink2' );
 			add_option( 'emailLink2', $email2nd, '', 'yes' );
 		} else {
 			update_option( 'emailLink2', $email2nd );
 		}
-		
+
 		if(empty($weblink)) {
 			delete_option( 'webLink' );
 			add_option( 'webLink', $website, '', 'yes' );
 		} else {
 			update_option( 'webLink', $website );
 		}
-		
+
 
 		$location = site_url()."/wp-admin/themes.php?page=custom_theme"; //meta refresh
 

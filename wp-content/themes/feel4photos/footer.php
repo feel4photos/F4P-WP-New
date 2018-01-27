@@ -25,7 +25,7 @@
                     </a>
                 </div><!-- / footer logo -->
                 <div class="c-footer__email u-linkhlight u-footer-gap">
-                    <a href="mailto:contact@feel4photos.com" title="contact@feel4photos.com">contact@feel4photos.com</a>
+                    <a href="mailto:<?php echo get_option('emailLink1');?>" title="<?php echo get_option('emailLink1');?>"><?php echo get_option('emailLink1');?></a>
                 </div><!-- / footer email -->
                 <div class="c-footer__tel u-footer-gap">
                     <p><a href="tel:9830027039" class="u-linkhlight">9830027039</a></p>
@@ -36,12 +36,12 @@
                 <?php get_template_part( 'template-parts/footer/footer', 'nav' ); ?><!-- / footer nav partial -->
 
                 <div class="c-footer__copyright u-uppercase u-txtgrey">
-                    <p>copyright &copy; 2018 <?php bloginfo('name'); ?></p>
+                    <p>copyright &copy; <?php the_time('Y'); ?> <?php bloginfo('name'); ?></p>
                 </div><!-- / footer copyright -->
                 <div class="c-footer__social c-social">
-                    <a href="https://www.facebook.com/feel4photos" target="_blank" class="u-linkbase social facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="<?php echo get_option('facebook_link');?>" target="_blank" class="u-linkbase social facebook"><i class="fa fa-facebook"></i></a>
                     <!-- <a href="javascript:void(0);" class="u-linkbase social twitter"><i class="fa fa-twitter"></i></a> -->
-                    <a href="https://www.instagram.com/feel4photos/" target="_blank" class="u-linkbase social instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="<?php echo get_option('instagram_link');?>" target="_blank" class="u-linkbase social instagram"><i class="fa fa-instagram"></i></a>
                 </div><!-- / footer social links -->
             </section><!-- / gm fixed width container -->
         </footer><!-- / footer -->
