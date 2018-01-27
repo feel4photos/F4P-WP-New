@@ -23,35 +23,30 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'feel4photos' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+    <?php if ( is_front_page() ) : ?>
+	<?php get_template_part( 'template-parts/header/site', 'preloader' ); ?><!-- / site preloader partial -->
+    <?php endif; ?>
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+    <section class="o-whole">
+        <?php if ( is_front_page() ) { ?>
+    	<header id="masthead" class="o-header c-header u-height100 u-relative" role="main-header">
+        <?php } else { ?>
+        <header id="masthead" class="o-header c-header u-height100 u-relative valign-wrapper parallax-container" role="main-header">
+        <?php } ?>
+            <?php get_template_part( 'template-parts/header/site', 'branding' ); ?><!-- / header site branding partial -->
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+            <?php get_template_part( 'template-parts/header/header', 'navoverlay' ); ?><!-- / header nav overlay partial -->
 
-	</header><!-- #masthead -->
+            <?php get_template_part( 'template-parts/header/header', 'searchoverlay' ); ?><!-- / header search overlay partial -->
 
-	<?php
+            <?php get_template_part( 'template-parts/header/header', 'cta' ); ?><!-- / header CTA partial -->
 
-	/*
-	 * If a regular post or page, and not the front page, show the featured image.
-	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-	 */
-	if ( ( is_single() || ( is_page() && ! feel4photos_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'feel4photos-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+            <?php if ( is_front_page() ) : ?>
+            	<?php get_template_part( 'template-parts/header/header', 'slider' ); ?><!-- / banner slider partial for home page only -->
+        	<?php elseif ( is_page() ) : ?>
+        		<?php get_template_part( 'template-parts/header/header', 'banner' ); ?><!-- / banner partial for all other pages -->
+        	<?php endif; ?>
+        </header><!-- / header -->
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+        <section class="o-content c-content" id="first-fold">

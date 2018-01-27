@@ -453,6 +453,10 @@ function feel4photos_scripts() {
 
 	wp_localize_script( 'feel4photos-skip-link-focus-fix', 'feel4photosScreenReaderText', $feel4photos_l10n );
 
+	wp_enqueue_script( 'modernizr', get_theme_file_uri( '/assets/js/modernizr.custom.js' ), false );
+
+	wp_enqueue_script( 'feel4photos-global-js', get_theme_file_uri( '/assets/js/@f4pjs-production/f4p-min.js' ), array( 'jquery' ), '1.0', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -584,3 +588,20 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+
+/* Start Advance Custom Theme Option */
+
+function custom_theme() {
+	require(TEMPLATEPATH."/admin-page/custom-theme.php");
+}
+add_action("admin_menu","add_admin_page_approveuser");
+
+function add_admin_page_approveuser() {
+	$url1=get_bloginfo("template_url")."/images/icon1.png";
+	add_theme_page( "custom_theme", "Custom Theme Option", "add_users", "custom_theme", custom_theme,$url1, 99);
+
+}
+
+/* End Advance Custom Theme Option */

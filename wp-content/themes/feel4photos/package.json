@@ -1,0 +1,27 @@
+{
+  "name": "feel4photos",
+  "version": "1.0.0",
+  "description": "The Photography Company",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-install": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feel4photos/F4P-WP-New.git"
+  },
+  "author": "Feel4photos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feel4photos/F4P-WP-New/issues"
+  },
+  "homepage": "https://github.com/feel4photos/F4P-WP-New#readme"
+}
