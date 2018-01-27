@@ -17,7 +17,7 @@
         <div class="row u-height100-prcnt">
             <div class="col s12 l5 valign-wrapper o-white u-height100-prcnt hide-on-med-and-down c-equalhght">
                 <div class="u-allpad-50 u-margin-0auto">
-                    <img src="images/logo-black.png" alt="Feel4photos" class="c-about__logo responsive-img">
+                    <img src="<?php echo get_option( 'logo_black' ); ?>" alt="<?php bloginfo('name'); ?>" class="c-about__logo responsive-img">
                 </div>
             </div><!-- / large logo about us are -->
             <div class="col s12 l7 u-height100-prcnt c-equalhght">

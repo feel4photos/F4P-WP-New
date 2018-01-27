@@ -117,9 +117,14 @@ add_option('social_link','');
       <td width="50%"><div class="preview"><img id="blah1" src="<?php echo get_option( 'header_logo' ); ?>" alt="No Image" class="blahblah" /></div></td>
     </tr>
     <tr>
-      <td width="25%"> Logo for Mobile : </td>
+      <td width="25%"> Logo for Footer : </td>
       <td width="25%"><input type="file" class="file2" name="mobilelogo" id="uploadfile2" value="" onchange="readURL(this,2);" /></td>
       <td width="50%"><div class="preview"><img id="blah2" src="<?php echo get_option( 'logo_mobile' ); ?>" alt="No Image" class="blahblah" /></div></td>
+    </tr>
+    <tr>
+      <td width="25%"> Logo Black : </td>
+      <td width="25%"><input type="file" class="file3" name="blacklogo" id="uploadfile5" value="" onchange="readURL(this,3);" /></td>
+      <td width="50%"><div class="preview"><img id="blah5" src="<?php echo get_option( 'logo_black' ); ?>" alt="No Image" class="blahblah" /></div></td>
     </tr>
   </table>
   <h3>Personal Information</h3>
@@ -456,6 +461,7 @@ add_option('social_link','');
 
 		$logoimage = $_FILES['logo'];
 		$logomobile = $_FILES['mobilelogo'];
+        $logoblack = $_FILES['blacklogo'];
 		$blogHdrImg = $_FILES['blogheaderimg'];
 		$siteFvIc = $_FILES['siteFavIcon'];
 		$upload_overrides = array( 'test_form' => false );
@@ -467,6 +473,8 @@ add_option('social_link','');
 		$movefile3 = wp_handle_upload( $blogHdrImg, $upload_overrides ); //file uploaded
 
 		$movefile4 = wp_handle_upload( $siteFvIc, $upload_overrides ); //file uploaded
+
+        $movefile5 = wp_handle_upload( $logoblack, $upload_overrides ); //file uploaded
 
 
 		if(!empty($siteFvIc['name']))
@@ -544,6 +552,33 @@ add_option('social_link','');
 			}
 
 		}
+
+
+
+
+        if(!empty($logoblack['name']))
+
+        {
+
+            $logoblack_val = get_option( 'logo_black' );
+
+            if((!empty($logoblack['name'])) && ($logoblack_val == ''))
+
+            {
+
+                add_option( 'logo_black', $movefile5['url'] );
+
+            }
+
+            else if(!empty($logoblack['name']) && ($logoblack_val!= ''))
+
+            {
+
+               update_option( 'logo_black', $movefile5['url'] );
+
+            }
+
+        }
 
 
 
