@@ -17,5 +17,7 @@ get_header(); ?>
 
 	<?php get_template_part ( 'template-parts/page/about', 'fragment' ); ?><!-- / about fragment partial -->
 
+    <?php get_template_part ( 'template-parts/page/portfolio', 'fragment' ); ?><!-- / portfolio fragment partial -->
+
 
 <?php get_footer();
