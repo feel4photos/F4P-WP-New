@@ -104,21 +104,48 @@
         </section><!-- / portfolio heading -->
         <section class="swiper-container swiper1 u-width100 u-height100">
             <article class="swiper-wrapper">
+                <?php if ( !empty($frontportfolio1) ) : ?>
                 <div class="swiper-slide u-oflowhidden">
                     <div class="swiper-zoom-container">
-                        <img src="images/blog-bg.jpg" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
+                        <img src="<?php echo $frontportfolio1['url']; ?>" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php if ( !empty($frontportfolio2) ) : ?>
                 <div class="swiper-slide u-oflowhidden">
                     <div class="swiper-zoom-container">
-                        <img src="images/blog-bg2.jpg" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
+                        <img src="<?php echo $frontportfolio2['url']; ?>" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php if ( !empty($frontportfolio3) ) : ?>
                 <div class="swiper-slide u-oflowhidden">
                     <div class="swiper-zoom-container">
-                        <img src="images/background1.jpg" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
+                        <img src="<?php echo $frontportfolio3['url']; ?>" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php if ( !empty($frontportfolio4) ) : ?>
+                <div class="swiper-slide u-oflowhidden">
+                    <div class="swiper-zoom-container">
+                        <img src="<?php echo $frontportfolio4['url']; ?>" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
+                    </div>
+                </div>
+                <?php endif; ?>
+                <?php if ( !empty($frontportfolio5) ) : ?>
+                <div class="swiper-slide u-oflowhidden">
+                    <div class="swiper-zoom-container">
+                        <img src="<?php echo $frontportfolio5['url']; ?>" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
+                    </div>
+                </div>
+                <?php endif; ?>
+                <?php if ( !empty($frontportfolio6) ) : ?>
+                <div class="swiper-slide u-oflowhidden">
+                    <div class="swiper-zoom-container">
+                        <img src="<?php echo $frontportfolio6['url']; ?>" alt="" class="u-height100 u-width100 u-objfit-cover u-obj-pos-center-middle">
+                    </div>
+                </div>
+                <?php endif; ?>
             </article>
             <!-- Add Pagination -->
             <div class="swiper-pagination swiper-pagination1 swiper-pagination-white u-absolute u-top-0 u-left-0 center-align"></div>
