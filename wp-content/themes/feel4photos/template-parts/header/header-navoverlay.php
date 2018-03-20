@@ -23,9 +23,7 @@
             <a href="mailto:<?php echo get_option('emailLink1');?>" title="<?php echo get_option('emailLink1');?>" class="u-linkhlight"><?php echo get_option('emailLink1');?></a>
         </p>
         <?php echo get_template_part( 'template-parts/common/contact', 'number' ); ?>
-        <div class="c-footer__copyright u-uppercase u-txtgrey">
-            <p>copyright &copy; <?php the_time('Y'); ?> <?php bloginfo('name'); ?></p>
-        </div><!-- / footer copyright -->
+        <?php echo get_template_part( 'template-parts/common/copyright', 'section' ); ?><!-- / footer copyright -->
         <div class="c-social">
             <?php echo get_template_part( 'template-parts/common/social', 'platforms' ); ?>
         </div>
