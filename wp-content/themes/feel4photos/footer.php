@@ -15,6 +15,9 @@
 ?>
 
 
+
+            <?php echo get_template_part( 'template-parts/common/common', 'getintouch' ); ?>
+
 		</section><!-- / main content area -->
 
 		<footer id="colophon" class="o-dark c-footer u-height100 u-topbottom-pad-50 u-left-pad u-right-pad valign-wrapper u-bauhaus-ffamily wow fadeInUp" role="main-footer">
@@ -28,7 +31,9 @@
                     <a href="mailto:<?php echo get_option('emailLink1');?>" title="<?php echo get_option('emailLink1');?>"><?php echo get_option('emailLink1');?></a>
                 </div><!-- / footer email -->
 
-                <?php echo get_template_part( 'template-parts/common/contact', 'number' ); ?><!-- / footer tel -->
+                <ul>
+                    <?php echo get_template_part( 'template-parts/common/contact', 'number' ); ?><!-- / footer tel -->
+                </ul>
 
                 <?php get_template_part( 'template-parts/footer/footer', 'nav' ); ?><!-- / footer nav partial -->
 
