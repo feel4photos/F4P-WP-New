@@ -31,7 +31,7 @@
                     <a href="mailto:<?php echo get_option('emailLink1');?>" title="<?php echo get_option('emailLink1');?>"><?php echo get_option('emailLink1');?></a>
                 </div><!-- / footer email -->
 
-                <ul>
+                <ul class="u-linkhlight">
                     <?php echo get_template_part( 'template-parts/common/contact', 'number' ); ?><!-- / footer tel -->
                 </ul>
 

@@ -16,7 +16,7 @@
             hummm... interested?
             say <strong>Hello ...</strong>
         </h2>
-        <ul class="c-hcontact__tel u-exlargetxt u-no-margin">
+        <ul class="c-hcontact__tel u-exlargetxt u-no-margin u-linkhlight">
             <?php echo get_template_part( 'template-parts/common/contact', 'number' ); ?>
         </ul>
     </section><!-- / gm fixed width container -->

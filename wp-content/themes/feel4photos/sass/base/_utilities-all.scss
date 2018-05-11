@@ -280,6 +280,16 @@
     a {
         @extend .u-linkhlight;
     }
+    &.c-hcontact {
+        &__tel {
+            a {
+                color: $f4p-base-color;
+                &:hover {
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
 }
 .u-linkbase {
     color: $f4p-base-color;
