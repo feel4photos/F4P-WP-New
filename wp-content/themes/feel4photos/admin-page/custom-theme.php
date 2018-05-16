@@ -268,6 +268,11 @@ add_option('social_link','');
       <td colspan="4"><input type="text" name="instagramlink" id="instagramlink" value="<?php echo get_option('instagram_link');?>" placeholder="Instagram link" style="width: 80%; margin-bottom: 10px;" />
       </td>
     </tr>
+    <tr>
+      <td>Pinterest</td>
+      <td colspan="4"><input type="text" name="pinterestlink" id="pinterestlink" value="<?php echo get_option('pinterest_link');?>" placeholder="Pinterest link" style="width: 80%; margin-bottom: 10px;" />
+      </td>
+    </tr>
   </table>
 
   <h3>Photography Courtesy Info</h3>
