@@ -38,4 +38,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 
+<?php if(is_page('portfolio')) : ?>
+	hello portfolio hi
+<?php endif; ?><!-- / portfolio page content area -->
+
 <?php get_footer();

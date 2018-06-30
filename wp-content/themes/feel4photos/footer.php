@@ -17,7 +17,6 @@
 
 
             <?php echo get_template_part( 'template-parts/common/common', 'getintouch' ); ?>
-
 		</section><!-- / main content area -->
 
 		<footer id="colophon" class="o-dark c-footer u-height100 u-topbottom-pad-50 u-left-pad u-right-pad valign-wrapper u-bauhaus-ffamily wow fadeInUp" role="main-footer">
@@ -47,7 +46,6 @@
         <a href="javascript:void(0);" id="scroll" class="btn btn-floating pulse c-arrowbtn c-arrowbtn--scrolltop o-hlight u-fixed" title="Scroll to Top" style="display: none;">
             <i class="fa fa-angle-up" aria-hidden="true"></i>
         </a><!-- / scroll to top button -->
-
 	</section><!-- / whole document area -->
 <?php wp_footer(); ?>
 
