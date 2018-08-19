@@ -120,6 +120,14 @@ p {
         font-size: $h2-fontsize;
         }
     }
+    &--large {
+        p{
+            &:first-letter {
+                font-size: 40px;
+                font-weight: $font-medium;
+            }
+        }
+    }
 }
 
 

@@ -18,6 +18,19 @@
 get_header(); ?>
 
 <?php if(is_page('portfolio')) : ?>
+
+	<section class="o-hlight u-width100 u-topbottom-pad-50 white-text valign-wrapper">
+        <section class="container">
+            <section class="row u-no-margin u-right-pad u-left-pad">
+                <div class="col s12 l12 hide-on-med-and-down left-align u-large-1st-lettr--large u-largetxt">
+                    <?php while ( have_posts() ) : the_post(); ?>
+                    	<?php the_content(); ?>
+                    <?php endwhile; ?>
+                </div><!-- / portfolio top content -->
+            </section><!-- / row for portfolio content -->
+        </section><!-- / portfolio archive -->
+    </section>
+
 	<main id="main" class="site-main c-portfolio-main" role="main">
 		<div class="swiper-container swiper5">
 			<div class="swiper-wrapper">

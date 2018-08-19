@@ -62,8 +62,11 @@
                         Portfolio
                     </h2>
                     <div class="c-portfolio__desc">
-                        <p>Our work in various fields has created a
-                        craze among our clients. We dedicate ourselves towards Model Photography, Event Photography, Product Photography, and above all Wedding Photography.</p>
+                        <?php
+                            $portfolioContent = get_post(9);
+                            $portfolioExcerpt = $portfolioContent->post_excerpt;
+                        ?>
+                        <p><?php echo $portfolioExcerpt; ?></p>
                     </div>
                 </div>
                 <!-- <div class="card-action">
