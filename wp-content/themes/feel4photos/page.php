@@ -19,7 +19,7 @@ get_header(); ?>
 
 <?php if(is_page('portfolio')) : ?>
 
-	<section class="o-hlight u-width100 u-topbottom-pad-50 white-text valign-wrapper">
+	<section class="o-hlight u-width100 u-topbottom-pad-50 white-text valign-wrapper wow fadeInUp">
         <section class="container">
             <section class="row u-no-margin u-right-pad u-left-pad">
                 <div class="col s12 l12 hide-on-med-and-down left-align u-large-1st-lettr--large u-largetxt">
@@ -31,7 +31,7 @@ get_header(); ?>
         </section><!-- / portfolio archive -->
     </section>
 
-	<main id="main" class="site-main c-portfolio-main" role="main">
+	<main id="main" class="site-main c-portfolio-main wow fadeInUp" role="main">
 		<div class="swiper-container swiper5">
 			<div class="swiper-wrapper">
 				<?php
