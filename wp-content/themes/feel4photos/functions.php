@@ -591,6 +591,43 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 
+/* Start F4P Portfolio Post Type */
+function f4pPortfolio_init() {
+
+$labels = array(
+	'name' => 'Portfolio',
+	'singular_name' => 'Portfolio',
+	'add_new' => _x('Add New Portfolio', 'Featured Portfolio'),
+	'add_new_item' => __('Add New Portfolio'),
+	'edit_item' => __('Edit Portfolio'),
+	'new_item' => __('New Portfolio'),
+	'view_item' => __('View Portfolio'),
+	'search_items' => __('Search Portfolio'),
+	'not_found' =>  __('No Portfolio have been added yet'),
+	'not_found_in_trash' => __('No Portfolio found in Trash'),
+	'parent_item_colon' => ''
+);
+
+$args = array(
+	'labels' => $labels,
+	'public' => true,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'show_in_nav_menus' => false,
+	//'rewrite' => array( 'slug' => 'the-team' ),
+	'supports' => array('title', 'editor', 'thumbnail', 'excerpt' ),
+	'has_archive' => true,
+   );
+
+register_post_type( 'f4pPortfolio' , $args );
+
+}
+
+add_action( 'init', 'f4pPortfolio_init' );
+/* End F4P Portfolio Post Type */
+
+
+
 /* Start Advance Custom Theme Option */
 
 function custom_theme() {

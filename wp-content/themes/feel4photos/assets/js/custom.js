@@ -28,7 +28,35 @@ var swiper4 = new Swiper('.swiper4', {
     prevButton: '.swiper-button-prev',
     paginationClickable: true,
 });
-
+var swiper5 = new Swiper('.swiper5', {
+    zoom: true,
+    pagination: '.swiper-pagination5',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    //Enable Scrollbar
+    scrollbar: '.swiper-scrollbar',
+    hide: false,
+    draggable: true,
+    snapOnRelease: true,
+    mousewheel: true,
+    breakpoints: {
+    768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        }
+    }
+});
 
 // click to scroll down
 $(function() {

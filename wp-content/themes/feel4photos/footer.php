@@ -47,7 +47,7 @@
             <i class="fa fa-angle-up" aria-hidden="true"></i>
         </a><!-- / scroll to top button -->
 	</section><!-- / whole document area -->
-<?php wp_footer(); ?>
 
+<?php wp_footer(); ?>
 </body>
 </html>

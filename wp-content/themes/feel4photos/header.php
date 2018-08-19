@@ -28,7 +28,7 @@
 	<?php get_template_part( 'template-parts/header/site', 'preloader' ); ?><!-- / site preloader partial -->
     <?php endif; ?>
 
-    <section class="o-whole">
+    <section class="o-whole-">
         <?php if ( is_front_page() ) { ?>
     	<header id="masthead" class="o-header c-header u-height100 u-relative" role="main-header">
         <?php } else { ?>

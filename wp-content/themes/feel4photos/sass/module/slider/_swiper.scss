@@ -499,7 +499,6 @@ button.swiper-pagination-bullet {
 }
 /* Scrollbar */
 .swiper-scrollbar {
-  border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
@@ -525,7 +524,6 @@ button.swiper-pagination-bullet {
   width: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
   left: 0;
   top: 0;
 }
@@ -572,4 +570,59 @@ button.swiper-pagination-bullet {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.swiper5 {
+    .swiper-slide {
+        height: 70vh;
+        width: 80%;
+        border: 1px solid red;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        &:nth-child(2n) {
+          width: 60%;
+        }
+        &:nth-child(3n) {
+          width: 40%;
+        }
+    }
+    .swiper-scrollbar {
+        height: 10px;
+        width: $f4p-grid-width-100;
+        position: relative !important;
+    }
+    .swiper-scrollbar-drag {
+        @extend .o-hlight;
+    }
+    .swiper-pagination {
+        @extend .u-relative;
+    }
+    .sw-btn-cont {
+        // background-color: #fff;
+        width: 50px;
+        z-index: 10;
+        @extend .u-absolute;
+        @extend .u-top-0;
+        @extend .u-bot-0;
+        &--left {
+            left: 0;
+        }
+        &--right {
+            right: 0;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+
+    }
 }

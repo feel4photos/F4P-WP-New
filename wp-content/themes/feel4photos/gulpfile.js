@@ -9,7 +9,7 @@ gulp.task('f4pjs', function() {
         'assets/js/jquery-library.js',
         'assets/js/materialize.js',
         'assets/js/slick.js',
-        'assets/js/swiper.min.js',
+        'assets/js/swiper.js',
         'assets/js/loadingoverlay.js',
         'assets/js/loadingoverlay_progress.js',
         'assets/js/jquery.lettering.js',

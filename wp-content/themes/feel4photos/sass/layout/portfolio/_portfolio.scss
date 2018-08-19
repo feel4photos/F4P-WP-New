@@ -60,6 +60,18 @@
     }
 }
 
+.c-portfolio-main {
+    padding: 50px;
+    @extend .u-relative;
+    &__image {
+
+    }
+    &__details {
+        @extend .u-absolute;
+        @extend .u-all-0;
+    }
+}
+
 
 
 
