@@ -64,11 +64,26 @@
     padding: 50px;
     @extend .u-relative;
     &__image {
-
+        @extend .u-width100;
+        @extend .u-height100-prcnt;
+        img {
+            @extend .u-height100-prcnt;
+            @extend .u-width100;
+            @extend .u-objfit-cover;
+            @extend .u-obj-pos-center-middle;
+        }
     }
     &__details {
         @extend .u-absolute;
         @extend .u-all-0;
+        @extend .u-valign-middle;
+        @extend .u-height100-prcnt;
+        @extend .white-text;
+        color: $white;
+        &--inner {
+            @extend .u-valign-middle-inner;
+            @extend .u-allpad-50;
+        }
     }
 }
 

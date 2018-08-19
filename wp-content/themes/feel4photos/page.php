@@ -36,13 +36,15 @@ get_header(); ?>
 				?>
 					<div class="swiper-slide">
 						<div class="c-portfolio-main__image">
-							<a href="javascript:void(0);">
-								<?php the_post_thumbnail('full'); ?>
-							</a>
+							<?php the_post_thumbnail('full'); ?>
 						</div><!-- / portfolio image -->
-						<div class="c-portfolio-main__details">
-							<?php the_title(); ?>
-							<?php the_content(); ?>
+						<div class="c-portfolio-main__details u-overlay u-overlay--black">
+							<div class="c-portfolio-main__details--inner">
+								<h3 class="c-title c-title--border-middle c-title--border-base-color white-text">
+									<?php the_title(); ?>
+								</h3>
+								<?php the_content(); ?>
+							</div>
 						</div><!-- / portfolio details -->
 					</div>
 

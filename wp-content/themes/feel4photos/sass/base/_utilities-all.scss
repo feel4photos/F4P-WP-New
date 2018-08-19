@@ -306,3 +306,21 @@
 .u-txtgrey {
     color: $f4p-grey-color;
 }
+
+//overlay
+.u-overlay {
+    @extend .u-absolute;
+    @extend .u-all-0;
+    @extend .center-align;
+    @extend .u-transition-all;
+    opacity: 0;
+    &--black {
+        background-color: rgba($black, 0);
+        &:hover {
+            background-color: rgba($black, 0.5);
+        }
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
