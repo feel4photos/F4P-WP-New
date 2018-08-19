@@ -33,19 +33,22 @@ get_header(); ?>
 					);
 					$portfolioPosts = new WP_Query( $portfolioArgs );
 					while ( $portfolioPosts->have_posts() ) : $portfolioPosts->the_post();
+					$portfolioThumb = get_the_post_thumbnail_url(get_the_ID(),'full');
 				?>
 					<div class="swiper-slide">
 						<div class="c-portfolio-main__image">
 							<?php the_post_thumbnail('full'); ?>
 						</div><!-- / portfolio image -->
-						<div class="c-portfolio-main__details u-overlay u-overlay--black">
-							<div class="c-portfolio-main__details--inner">
-								<h3 class="c-title c-title--border-middle c-title--border-base-color white-text">
-									<?php the_title(); ?>
-								</h3>
-								<?php the_content(); ?>
-							</div>
-						</div><!-- / portfolio details -->
+						<a href="<?php echo $portfolioThumb; ?>" class="swipebox c-portfolio-link" rel="portfolio-main">
+							<div class="c-portfolio-main__details u-overlay u-overlay--black">
+								<div class="c-portfolio-main__details--inner">
+									<h3 class="c-title c-title--border-middle c-title--border-base-color white-text">
+										<?php the_title(); ?>
+									</h3>
+									<?php the_content(); ?>
+								</div>
+							</div><!-- / portfolio details -->
+						</a>
 					</div>
 
 				<?php endwhile; wp_reset_query(); ?>

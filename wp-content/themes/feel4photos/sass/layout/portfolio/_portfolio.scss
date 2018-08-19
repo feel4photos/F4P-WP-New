@@ -63,6 +63,13 @@
 .c-portfolio-main {
     padding: 50px;
     @extend .u-relative;
+    .c-portfolio-link {
+        z-index: 10;
+        @extend .u-display-block;
+        @extend .u-absolute;
+        @extend .u-width100;
+        @extend .u-height100-prcnt;
+    }
     &__image {
         @extend .u-width100;
         @extend .u-height100-prcnt;
@@ -83,6 +90,9 @@
         &--inner {
             @extend .u-valign-middle-inner;
             @extend .u-allpad-50;
+            a {
+                color: $white;
+            }
         }
     }
 }
