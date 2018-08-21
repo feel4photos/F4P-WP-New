@@ -35,6 +35,11 @@
     width: $f4p-grid-width-100 / 1.14;
 }
 
+// width 75%
+.u-width75 {
+    width: $f4p-grid-width-100 / 1.30;
+}
+
 
 // alignment
 .u-valign-middle {
@@ -318,6 +323,13 @@
         background-color: rgba($black, 0);
         &:hover {
             background-color: rgba($black, 0.5);
+        }
+    }
+    &--black-reverse {
+        background-color: rgba($black, 0.4);
+        @extend .u-transition-all;
+        &:hover {
+            background-color: rgba($black, 0.6);
         }
     }
     &:hover {
