@@ -4,7 +4,6 @@
     // height: $f4p-grid-height-100;
 }
 
-
 .o-catgrylist {
     ul {
 
@@ -13,6 +12,24 @@
         display: inline-block;
         margin: $all-zero $all-zero - 2;
         text-decoration: underline;
+    }
+}
+
+.c-hblog {
+    &__title {
+        font-size: $h1-fontsize;
+        letter-spacing: $all-zero + 3;
+    }
+    &__datedetails {
+        span {
+            @extend .u-display-block;
+        }
+    }
+    &__postdate {
+        font-size: $h1-fontsize * 2;
+        margin-bottom: $all-zero + 10 !important;
+        @extend .u-no-padding;
+        @extend strong;
     }
 }
 

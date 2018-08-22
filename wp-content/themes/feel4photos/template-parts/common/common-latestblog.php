@@ -43,8 +43,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4">
-                <?php the_title(); ?>
+            <div class="col s12 l4 right-align c-hblog__datedetails">
+                <span class="c-hblog__postdate c-title c-title--border-right c-title--border-bottom c-title--border-base-color">
+                    <?php echo get_the_date( 'd' ); ?>
+                </span>
+                <span class="c-hblog__postmonth"><?php echo get_the_date( 'F' ); ?></span>
+                <span class="c-hblog__postyear"><?php echo get_the_date( 'Y' ); ?></span>
             </div>
         </div>
     </section><!-- / gm fixed width container -->
