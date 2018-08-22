@@ -167,10 +167,12 @@
     padding: 0 $card-padding;
 
     a:not(.btn):not(.btn-large):not(.btn-floating) {
-      color: $card-link-color;
-      margin-right: $card-padding;
+      //color: $card-link-color;
+      color: $f4p-base-color;
+      //margin-right: $card-padding;
+      margin-top: 15px;
       transition: color .3s ease;
-      text-transform: uppercase;
+      @extend .u-uppercase;
 
       &:hover { color: $card-link-color-light; }
     }

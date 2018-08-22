@@ -298,22 +298,28 @@ button.btn-floating {
     line-height: $f4p-button-lineheight;
     outline: none;
     padding: $f4p-button-padding;
-}
-
-.c-btn--noborder {
-    border: none;
-}
-
-.c-btn--border {
-    border: $button-radius solid $f4p-base-color;
-}
-
-.c-btn--borderadius {
-    @include border-radius($all-zero + 50);
-}
-
-.c-btn--nobg {
-    background-color: $transparent;
+    @extend .u-display-in-block;
+    &--border-hlight {
+        border: $button-radius solid $f4p-hlight-tone;
+    }
+    &--border-base {
+        border: $button-radius solid $f4p-base-color;
+    }
+    &--border-radius {
+        @include border-radius($all-zero + 50);
+    }
+    &--bgcolor-hlight {
+        background-color: $f4p-hlight-tone;
+    }
+    &--bgcolor-base {
+        background-color: $f4p-base-color;
+    }
+    &--nobg {
+        background-color: $transparent;
+    }
+    &--noborder {
+        border: none;
+    }
 }
 
 .c-arrowbtn {
