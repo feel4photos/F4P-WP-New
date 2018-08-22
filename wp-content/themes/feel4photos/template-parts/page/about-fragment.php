@@ -29,7 +29,7 @@
                             <?php echo wpautop($pagedata->post_excerpt); ?>
                         </div>
                     </div>
-                    <div class="card-action u-no-padding">
+                    <div class="card-action">
                         <a href="<?php echo get_permalink(7); ?>" title="More" class="c-about__mlink c-btn c-btn--nobg c-btn--border-base c-btn--border-radius">More</a>
                     </div>
                 </div>

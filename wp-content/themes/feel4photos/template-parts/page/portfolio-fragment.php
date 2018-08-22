@@ -67,6 +67,7 @@
                             $portfolioExcerpt = $portfolioContent->post_excerpt;
                         ?>
                         <p><?php echo $portfolioExcerpt; ?></p>
+                        <!-- <a href="<?php echo get_permalink(9); ?>" title="More" class="c-btn c-btn--border-radius c-btn--bgcolor-hlight c-btn--noborder">More</a> -->
                     </div>
                 </div>
                 <!-- <div class="card-action">

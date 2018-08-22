@@ -39,11 +39,13 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <a href="<?php the_permalink(); ?>" title="More" class="c-hblog__mlink">More</a>
+                        <a href="<?php the_permalink(); ?>" title="More" class="c-hblog__mlink c-btn c-btn--border-radius c-btn--bgcolor-hlight c-btn--noborder">More</a>
                     </div>
                 </div>
             </div>
-            <div class="col s12 l4"></div>
+            <div class="col s12 l4">
+                <?php the_title(); ?>
+            </div>
         </div>
     </section><!-- / gm fixed width container -->
     <section class="c-hblog__featureimg parallax">
