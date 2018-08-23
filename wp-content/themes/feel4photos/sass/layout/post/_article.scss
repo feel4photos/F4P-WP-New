@@ -16,6 +16,13 @@
 }
 
 .c-hblog {
+    &__cat {
+        margin-bottom: $all-zero + 10;
+        @extend .u-display-in-block;
+        a {
+            color : $f4p-base-color;
+        }
+    }
     &__title {
         font-size: $h1-fontsize;
         letter-spacing: $all-zero + 3;

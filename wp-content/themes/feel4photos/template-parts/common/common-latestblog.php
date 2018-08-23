@@ -31,7 +31,9 @@
                 <div class="card">
                     <div class="card-content u-width75">
                         <h2 class="card-title c-title c-title--border-bottom c-title--border-hlight-color c-hblog__title u-uppercase u-no-topmargin">
-                            <span class="u-capitalize u-smallertxt u-bauhaus-ffamily">Our Fashion</span>
+                            <span class="c-hblog__cat u-capitalize u-smallertxt u-bauhaus-ffamily">
+                                <?php the_category(', '); ?>
+                            </span>
                             <?php the_title(); ?>
                         </h2>
                         <div class="c-hblog__desc">
