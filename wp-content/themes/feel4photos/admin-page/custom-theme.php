@@ -273,6 +273,11 @@ add_option('social_link','');
       <td colspan="4"><input type="text" name="pinterestlink" id="pinterestlink" value="<?php echo get_option('pinterest_link');?>" placeholder="Pinterest link" style="width: 80%; margin-bottom: 10px;" />
       </td>
     </tr>
+    <tr>
+      <td>Behance</td>
+      <td colspan="4"><input type="text" name="behancelink" id="behancelink" value="<?php echo get_option('behance_link');?>" placeholder="Behance link" style="width: 80%; margin-bottom: 10px;" />
+      </td>
+    </tr>
   </table>
 
   <h3>Photography Courtesy Info</h3>
@@ -617,6 +622,7 @@ add_option('social_link','');
 		$instagram_link = get_option( 'instagram_link' );
 		$pin_link = get_option( 'pinterest_link' );
 		$ytube_link = get_option( 'youtube_link' );
+        $bhance_link = get_option( 'behance_link' );
 
 		$clientName = get_option ('clntName');
 
@@ -676,6 +682,18 @@ add_option('social_link','');
 					update_option( 'pinterest_link', $pinterestlink );
 
 			   }
+
+        if(empty($bhance_link)) {
+
+            delete_option( 'behance_link' );
+
+            add_option( 'behance_link', $behancelink, '', 'yes' );
+
+        } else {
+
+                    update_option( 'behance_link', $behancelink );
+
+               }
 
 		if(empty($ytube_link)) {
 			delete_option( 'youtube_link' );
