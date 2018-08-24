@@ -10,10 +10,15 @@
     }
     &__cta {
         font-size: $body-font-size * 1.5;
+        margin-top: $all-zero + 7;
+        width: $all-zero + 70;
         @extend .right;
         @extend .u-display-in-block;
         @media #{$large-and-up} {
             font-size: $body-font-size * 2 + 2;
+        }
+        .o-mainnav {
+            @extend .right;
         }
     }
     // &.headroom {
@@ -34,7 +39,7 @@
         background-color: rgba(0, 0, 0, 0.8);
         padding: $all-zero + 20 $all-zero + 30 $all-zero + 10;
         @media #{$large-and-up} {
-            padding: $all-zero + 40 $all-zero + 50 $all-zero + 30;
+            padding: $all-zero + 40 $all-zero + 50;
         }
     }
 
