@@ -21,6 +21,11 @@
         @extend .u-display-in-block;
         a {
             color : $f4p-base-color;
+            margin-right: $all-zero + 6;
+            @extend %u-opacity-1;
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
     &__title {

@@ -333,6 +333,6 @@
         }
     }
     &:hover {
-        opacity: 1;
+        @extend %u-opacity-1;
     }
 }
