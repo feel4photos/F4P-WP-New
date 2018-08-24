@@ -44,7 +44,11 @@
         }
     }
     .o-search-box {
-
+        .o-header-ovrlay__inner {
+            @media #{$large-and-up} {
+                width: $f4p-grid-width-100;
+            }
+        }
     }
     .open {
         opacity: 1;

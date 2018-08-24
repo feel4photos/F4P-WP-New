@@ -21,8 +21,19 @@
         </a>
     </div><!-- / close button -->
     <section class="o-header-ovrlay__inner">
-        <form>
-            <input type="search" name="">
+        <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <label for="<?php echo $unique_id; ?>">
+                <span class="screen-reader-text">
+                    <?php echo _x( 'Search for:', 'label', 'feel4photos' ); ?>
+                </span>
+            </label>
+            <input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'feel4photos' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+            <button type="submit" class="search-submit">
+                <?php echo feel4photos_get_svg( array( 'icon' => 'search' ) ); ?>
+                <span class="screen-reader-text">
+                    <?php echo _x( 'Search', 'submit button', 'feel4photos' ); ?>
+                </span>
+            </button>
         </form>
     </section>
 </div><!-- / search box -->
