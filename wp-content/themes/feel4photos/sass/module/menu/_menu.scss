@@ -79,8 +79,8 @@
 
     .close {
         position: fixed;
-        top: 40px;
-        right: 60px;
+        right: $all-zero + 50;
+        top: $all-zero + 65;
         color: white;
         z-index: 3;
         cursor: pointer;
@@ -108,10 +108,12 @@
     }
     .outer-close {
         @extend .u-absolute;
-        @extend .u-right-0;
-        @extend .u-top-0;
-        width: $all-zero + 85;
-        height: $all-zero + 85;
+        //@extend .u-right-0;
+        //@extend .u-top-0;
+        right: $all-zero + 50;
+        top: $all-zero + 65;
+        width: $all-zero + 25;
+        height: $all-zero + 25;
         cursor: pointer;
     }
 }
