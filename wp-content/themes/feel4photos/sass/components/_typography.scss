@@ -125,6 +125,7 @@ p {
             &:first-letter {
                 font-size: $body-font-size * 3.5;
                 font-weight: $font-medium;
+                @extend .u-capitalize;
             }
         }
     }

@@ -54,7 +54,7 @@ get_header(); ?>
                     <div class="u-topbottom-pad-50 u-left-pad u-right-pad">
                     	<?php while ( have_posts() ) : the_post(); ?>
                         <div class="card-content">
-                            <div class="o-article__quote u-quotetxt u-largetxt c-title c-title--border-bottom c-title--border-hlight-color">
+                            <div class="o-article__quote u-quotetxt u-largetxt u-large-1st-lettr--large c-title c-title--border-bottom c-title--border-hlight-color">
                                 <?php the_excerpt(); ?>
                             </div>
                             <div class="o-article__desc">
