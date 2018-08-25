@@ -110,7 +110,40 @@ get_header(); ?>
 
 <?php elseif(is_page('contact')) : ?>
 
-hello
+	<section class="o-hlight u-width100 u-topbottom-pad-50 white-text valign-wrapper wow fadeInUp">
+        <section class="container">
+            <section class="row u-no-margin u-right-pad u-left-pad">
+                <div class="col s12 l12 hide-on-med-and-down left-align u-large-1st-lettr--large u-largetxt">
+                	<?php while ( have_posts() ) : the_post(); ?>
+                    	<?php the_excerpt(); ?>
+                    <?php endwhile; ?>
+                </div><!-- / portfolio top content -->
+            </section><!-- / row for portfolio content -->
+        </section><!-- / portfolio archive -->
+    </section><!-- / about page excerpt -->
+
+    <section class="o-lightgray o-listarticles wow fadeInUp">
+        <article class="container u-width100 o-article o-article--single">
+            <section class="row u-no-margin">
+                <section class="col s12 l12 u-no-padding">
+                    <div class="card container u-margin-0auto">
+                        <div class="u-topbottom-pad-50 u-left-pad u-right-pad">
+                            <div class="card-content">
+                                <div class="o-article__desc">
+                                	<?php while ( have_posts() ) : the_post(); ?>
+				                    	<?php the_content(); ?>
+				                    <?php endwhile; ?>
+				                    <div class="o-contact">
+				                    	<?php echo get_template_part( 'template-parts/common/contact', 'number' ); ?>
+				                    </div>
+                                </div><!-- / detailed content -->
+                            </div>
+                        </div>
+                    </div><!-- / blog content -->
+                </section><!-- / single content and sub image -->
+            </section>
+        </article><!-- / single article area -->
+    </section><!-- / about page detailed content -->
 
 <?php elseif (is_page()) : ?>
 
