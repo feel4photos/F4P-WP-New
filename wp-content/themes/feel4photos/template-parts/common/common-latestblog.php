@@ -37,7 +37,7 @@
                             <?php the_title(); ?>
                         </h2>
                         <div class="c-hblog__desc">
-                            <?php the_content(); ?>
+                            <?php the_excerpt(); ?>
                         </div>
                     </div>
                     <div class="card-action">

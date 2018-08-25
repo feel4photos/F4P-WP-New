@@ -5,13 +5,36 @@
 }
 
 .o-catgrylist {
-    ul {
-
-    }
+    ul {}
     li {
         display: inline-block;
         margin: $all-zero $all-zero - 2;
+        padding-right: $all-zero + 4;
         text-decoration: underline;
+        &:after {
+            content: "\002c";
+        }
+        &:last-child {
+            &:after {
+                @extend .u-display-none;
+            }
+        }
+    }
+    &.o-archvlist {
+        li {
+            padding-right: $all-zero;
+        }
+    }
+    &.u-linkbase {
+        &:hover {
+            @extend %u-opacity-1;
+        }
+    }
+}
+
+.o-topbar-singlepost {
+    h3 {
+        color: $f4p-base-color;
     }
 }
 

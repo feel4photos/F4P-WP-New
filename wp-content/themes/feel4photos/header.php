@@ -44,7 +44,7 @@
 
             <?php if ( is_front_page() ) : ?>
             	<?php get_template_part( 'template-parts/header/header', 'slider' ); ?><!-- / banner slider partial for home page only -->
-        	<?php elseif ( is_page() ) : ?>
+        	<?php elseif ( is_page() || is_single() ) : ?>
         		<?php get_template_part( 'template-parts/header/header', 'banner' ); ?><!-- / banner partial for all other pages -->
         	<?php endif; ?>
         </header><!-- / header -->

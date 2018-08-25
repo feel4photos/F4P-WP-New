@@ -12,32 +12,79 @@
 
 get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<section class="o-hlight o-topbar-singlepost u-width100 u-topbottom-pad-50 white-text valign-wrapper">
+    <section class="container">
+        <section class="row u-no-margin u-right-pad u-left-pad">
+            <div class="col s12 l4 hide-on-med-and-down left-align">
+                <h3 class="c-title c-title--border-bottom c-title--border-base-color u-uppercase u-no-topmargin">Categories</h3>
+                <div class="o-catgrylist u-linkbase u-smallcaps u-width80">
+                    <ul class="u-no-margin">
+                        <?php
+	                    	$categories = get_categories();
+								foreach($categories as $category) {
+							   	echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+								}
+						?>
+                    </ul>
+                </div>
+            </div><!-- / categories -->
+            <div class="col s12 l4 center-align">
+                <h3 class="c-title u-uppercase c-title--border-middle c-title--border-bottom c-title--border-base-color c-title--type3 u-no-topmargin">Stay in touch</h3>
+                <section class="c-social">
+                	<?php echo get_template_part( 'template-parts/common/social', 'platforms' ); ?>
+                </section><!-- / stay in touch social icon -->
+            </div><!-- / stay in touch -->
+            <div class="col s12 l4 hide-on-med-and-down right-align">
+                <h3 class="c-title c-title--border-right c-title--border-bottom c-title--border-base-color u-uppercase u-no-topmargin">Archive</h3>
+                <div class="o-catgrylist o-archvlist u-linkbase u-smallcaps u-width80 right">
+                    <ul class="u-no-margin">
+                        <?php wp_get_archives( $args ); ?>
+                    </ul>
+                </div>
+            </div><!-- / archive -->
+        </section><!-- / row for categories stay in touch archive -->
+    </section><!-- / categories stay in touch archive -->
+</section>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+<section class="o-listarticles">
+    <article class="container u-width100 o-article o-article--single">
+        <section class="row u-no-margin">
+            <section class="col s12 l12 u-no-padding">
+                <div class="card container u-margin-0auto">
+                    <div class="u-topbottom-pad-50 u-left-pad u-right-pad">
+                        <div class="card-content">
+                            <!-- <div class="o-article__quote u-quotetxt u-largetxt c-title c-title--border-bottom c-title--border-hlight-color">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div> -->
+                            <div class="o-article__desc">
+                                <?php
+									/* Start the Loop */
+									while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/post/content', get_post_format() );
+										get_template_part( 'template-parts/post/content', get_post_format() );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+										// If comments are open or we have at least one comment, load up the comment template.
+										// if ( comments_open() || get_comments_number() ) :
+										// 	comments_template();
+										// endif;
 
-				the_post_navigation( array(
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'feel4photos' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'feel4photos' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-				) );
+										the_post_navigation( array(
+											'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'feel4photos' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
+											'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'feel4photos' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+										) );
 
-			endwhile; // End of the loop.
-			?>
+									endwhile; // End of the loop.
+									?>
+                            </div><!-- / excerpt -->
+                        </div>
+                        <div class="card-action u-no-padding">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+                        </div><!-- / permalink -->
+                    </div>
+                </div><!-- / blog content -->
+            </section><!-- / single content and sub image -->
+        </section>
+    </article><!-- / single article area -->
+</section><!-- / list of articles -->
 
 <?php get_footer();
