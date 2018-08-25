@@ -13,12 +13,18 @@
                     @extend .u-absolute;
                     @extend .u-translate-50;
                     @extend .u-transition-all;
+                    @extend .u-bg-cover;
+                    @extend .u-bg-pos-center-middle;
+                    @extend .u-bg-norepeat;
                     color: $white;
-                    content: "\f055";
-                    font-family: 'FontAwesome';
-                    font-size: $body-font-size;
+                    // content: "\f055";
+                    // font-family: 'FontAwesome';
+                    // font-size: $body-font-size;
                     opacity: 0;
                     z-index: 5;
+                    width: $all-zero + 10;
+                    height: $all-zero + 10;
+                    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MiA1MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnPgoJPHBhdGggZD0iTTI2LDBDMTEuNjY0LDAsMCwxMS42NjMsMCwyNnMxMS42NjQsMjYsMjYsMjZzMjYtMTEuNjYzLDI2LTI2UzQwLjMzNiwwLDI2LDB6IE0yNiw1MEMxMi43NjcsNTAsMiwzOS4yMzMsMiwyNiAgIFMxMi43NjcsMiwyNiwyczI0LDEwLjc2NywyNCwyNFMzOS4yMzMsNTAsMjYsNTB6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMzguNSwyNUgyN1YxNGMwLTAuNTUzLTAuNDQ4LTEtMS0xcy0xLDAuNDQ3LTEsMXYxMUgxMy41Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxSDI1djEyYzAsMC41NTMsMC40NDgsMSwxLDEgICBzMS0wLjQ0NywxLTFWMjdoMTEuNWMwLjU1MiwwLDEtMC40NDcsMS0xUzM5LjA1MiwyNSwzOC41LDI1eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
                 }
                 span {
                     @extend .u-absolute;
@@ -32,12 +38,13 @@
 
                 &:hover {
                     &:before {
-                        font-size: $body-font-size * 3.5;
-                        opacity: 1;
-                        border: 1px solid red;
+                        //font-size: $body-font-size * 3.5;
+                        width: $all-zero + 50;
+                        height: $all-zero + 50;
+                        @extend %u-opacity-1;
                     }
                     span {
-                        opacity: 1;
+                        @extend %u-opacity-1;
                     }
                 }
             }

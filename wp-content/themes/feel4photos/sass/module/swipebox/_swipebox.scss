@@ -153,6 +153,8 @@ html.swipebox-html.swipebox-touch {
 	z-index: 9999;
 	@extend .u-absolute;
 	@extend .u-bg-cover;
+	@extend .u-bg-pos-center-middle;
+    @extend .u-bg-norepeat;
 }
 #swipebox-close {
 	top: $all-zero + 25;
