@@ -49,6 +49,28 @@
                 width: $f4p-grid-width-100;
             }
         }
+        .search-form {
+            input {
+                color: $f4p-base-color;
+                font-size: $body-font-size * 3.5;
+                letter-spacing: $all-zero + 2;
+                &:focus {
+                    @extend %u-box-shadow-no;
+                }
+            }
+            button {
+                &.search-submit {
+                    //@extend %u-bg-color-trans;
+                    @extend .o-dark;
+                    @extend .u-absolute;
+                    //@extend .u-right-0;
+                    @extend .u-top-0;
+                    right: $all-zero - 2;
+                    bottom: $all-zero + 1;
+                    padding: $all-zero $all-zero + 10 $all-zero $all-zero + 30;
+                }
+            }
+        }
     }
     .open {
         opacity: 1;

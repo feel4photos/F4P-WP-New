@@ -123,7 +123,7 @@ p {
     &--large {
         p{
             &:first-letter {
-                font-size: 40px;
+                font-size: $body-font-size * 3.5;
                 font-weight: $font-medium;
             }
         }
