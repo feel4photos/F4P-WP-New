@@ -278,6 +278,11 @@ add_option('social_link','');
       <td colspan="4"><input type="text" name="behancelink" id="behancelink" value="<?php echo get_option('behance_link');?>" placeholder="Behance link" style="width: 80%; margin-bottom: 10px;" />
       </td>
     </tr>
+    <tr>
+      <td>Google Plus</td>
+      <td colspan="4"><input type="text" name="googlepluslink" id="googlepluslink" value="<?php echo get_option('gplus_link');?>" placeholder="Google Plus link" style="width: 80%; margin-bottom: 10px;" />
+      </td>
+    </tr>
   </table>
 
   <h3>Photography Courtesy Info</h3>
@@ -617,12 +622,13 @@ add_option('social_link','');
 		}
 
 
-		$fb_link = get_option( 'facebook_link' );
-		$twitt_link = get_option( 'twitt_link' );
-		$instagram_link = get_option( 'instagram_link' );
-		$pin_link = get_option( 'pinterest_link' );
-		$ytube_link = get_option( 'youtube_link' );
-        $bhance_link = get_option( 'behance_link' );
+		$fb_link          = get_option( 'facebook_link' );
+		$twitt_link       = get_option( 'twitt_link' );
+		$instagram_link   = get_option( 'instagram_link' );
+		$pin_link         = get_option( 'pinterest_link' );
+		$ytube_link       = get_option( 'youtube_link' );
+        $bhance_link      = get_option( 'behance_link' );
+        $googlplus_link   = get_option( 'gplus_link' );
 
 		$clientName = get_option ('clntName');
 
@@ -692,6 +698,18 @@ add_option('social_link','');
         } else {
 
                     update_option( 'behance_link', $behancelink );
+
+               }
+
+        if(empty($googlplus_link)) {
+
+            delete_option( 'gplus_link' );
+
+            add_option( 'gplus_link', $googlepluslink, '', 'yes' );
+
+        } else {
+
+                    update_option( 'gplus_link', $googlepluslink );
 
                }
 

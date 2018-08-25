@@ -30,4 +30,9 @@
         <i class="fa fa-behance"></i>
     </a>
 <?php endif; ?>
+<?php if(get_option('gplus_link')) : ?>
+    <a href="<?php echo get_option('gplus_link'); ?>" target="_blank" class="u-linkbase social gplus">
+        <i class="fa fa-google-plus"></i>
+    </a>
+<?php endif; ?>
 
