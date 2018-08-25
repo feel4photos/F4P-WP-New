@@ -15,6 +15,16 @@
             }
         }
     }
+    &--singlepost {
+        a {
+            &.u-linkbase {
+                &:hover {
+                    color: $f4p-base-color;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
     &.c-social--bottom {
         bottom: $all-zero + 90;
         @extend .u-width100;

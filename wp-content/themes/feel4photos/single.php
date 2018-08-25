@@ -30,7 +30,7 @@ get_header(); ?>
             </div><!-- / categories -->
             <div class="col s12 l4 center-align">
                 <h3 class="c-title u-uppercase c-title--border-middle c-title--border-bottom c-title--border-base-color c-title--type3 u-no-topmargin">Stay in touch</h3>
-                <section class="c-social">
+                <section class="c-social c-social--singlepost">
                 	<?php echo get_template_part( 'template-parts/common/social', 'platforms' ); ?>
                 </section><!-- / stay in touch social icon -->
             </div><!-- / stay in touch -->
