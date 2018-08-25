@@ -108,6 +108,10 @@ get_header(); ?>
 	    </section><!-- / about page detailed content -->
     <?php endwhile; ?>
 
+<?php elseif(is_page('contact')) : ?>
+
+hello
+
 <?php elseif (is_page()) : ?>
 
 	<div class="wrap">

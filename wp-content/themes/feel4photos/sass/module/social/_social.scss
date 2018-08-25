@@ -8,6 +8,12 @@
         &:last-child {
             margin-right: $all-zero;
         }
+        &.u-linkbase {
+            &:hover {
+                color: $f4p-hlight-tone;
+                opacity: 0.9;
+            }
+        }
     }
     &.c-social--bottom {
         bottom: $all-zero + 90;
