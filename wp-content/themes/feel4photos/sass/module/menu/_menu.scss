@@ -54,6 +54,7 @@
                 color: $f4p-base-color;
                 font-size: $body-font-size * 3.5;
                 letter-spacing: $all-zero + 2;
+                padding-bottom: $all-zero + 10;
                 &:focus {
                     @extend %u-box-shadow-no;
                 }
