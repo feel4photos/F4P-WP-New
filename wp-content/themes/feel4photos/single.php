@@ -52,31 +52,20 @@ get_header(); ?>
             <section class="col s12 l12 u-no-padding">
                 <div class="card container u-margin-0auto">
                     <div class="u-topbottom-pad-50 u-left-pad u-right-pad">
+                    	<?php while ( have_posts() ) : the_post(); ?>
                         <div class="card-content">
-                            <!-- <div class="o-article__quote u-quotetxt u-largetxt c-title c-title--border-bottom c-title--border-hlight-color">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            </div> -->
+                            <div class="o-article__quote u-quotetxt u-largetxt c-title c-title--border-bottom c-title--border-hlight-color">
+                                <?php the_excerpt(); ?>
+                            </div>
                             <div class="o-article__desc">
-                                <?php
-									/* Start the Loop */
-									while ( have_posts() ) : the_post();
-
-										get_template_part( 'template-parts/post/content', get_post_format() );
-
-										// If comments are open or we have at least one comment, load up the comment template.
-										// if ( comments_open() || get_comments_number() ) :
-										// 	comments_template();
-										// endif;
-
-										the_post_navigation( array(
-											'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'feel4photos' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-											'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'feel4photos' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-										) );
-
-									endwhile; // End of the loop.
-									?>
-                            </div><!-- / excerpt -->
+								<?php the_content(); ?>
+								<?php the_post_navigation( array(
+									'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'feel4photos' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
+									'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'feel4photos' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'feel4photos' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . feel4photos_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+								) ); ?>
+							</div><!-- / main content -->
                         </div>
+                    	<?php endwhile; // End of the loop. ?>
                         <div class="card-action u-no-padding">
 
                         </div><!-- / permalink -->
