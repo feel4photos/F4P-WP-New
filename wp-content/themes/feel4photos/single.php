@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<section class="o-hlight o-topbar-singlepost u-width100 u-topbottom-pad-50 white-text valign-wrapper">
+<section class="o-hlight o-topbar-singlepost u-width100 u-topbottom-pad-50 white-text valign-wrapper wow fadeInUp">
     <section class="container">
         <section class="row u-no-margin u-right-pad u-left-pad">
             <div class="col s12 l4 hide-on-med-and-down left-align">
@@ -46,7 +46,7 @@ get_header(); ?>
     </section><!-- / categories stay in touch archive -->
 </section>
 
-<section class="o-listarticles">
+<section class="o-listarticles wow fadeInUp">
     <article class="container u-width100 o-article o-article--single">
         <section class="row u-no-margin">
             <section class="col s12 l12 u-no-padding">
