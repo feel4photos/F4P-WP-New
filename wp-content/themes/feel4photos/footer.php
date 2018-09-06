@@ -16,6 +16,7 @@
 
 
             <?php echo get_template_part( 'template-parts/common/common', 'latestblog' ); ?>
+            <?php echo get_template_part( 'template-parts/common/common', 'clients' ); ?>
             <?php echo get_template_part( 'template-parts/common/common', 'getintouch' ); ?>
 		</section><!-- / main content area -->
 

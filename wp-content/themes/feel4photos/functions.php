@@ -628,6 +628,43 @@ add_action( 'init', 'f4pPortfolio_init' );
 
 
 
+/* Start F4P Clients Post Type */
+function f4pClient_init() {
+
+$labels = array(
+	'name' => 'Clients',
+	'singular_name' => 'Client',
+	'add_new' => _x('Add New Client', 'Featured Client'),
+	'add_new_item' => __('Add New Client'),
+	'edit_item' => __('Edit Client'),
+	'new_item' => __('New Client'),
+	'view_item' => __('View Client'),
+	'search_items' => __('Search Client'),
+	'not_found' =>  __('No Client have been added yet'),
+	'not_found_in_trash' => __('No Client found in Trash'),
+	'parent_item_colon' => ''
+);
+
+$args = array(
+	'labels' => $labels,
+	'public' => true,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'show_in_nav_menus' => false,
+	//'rewrite' => array( 'slug' => 'the-team' ),
+	'supports' => array('title', 'editor', 'thumbnail', 'excerpt' ),
+	'has_archive' => true,
+   );
+
+register_post_type( 'f4pClient' , $args );
+
+}
+
+add_action( 'init', 'f4pClient_init' );
+/* End F4P Clients Post Type */
+
+
+
 /* Start Advance Custom Theme Option */
 
 function custom_theme() {
