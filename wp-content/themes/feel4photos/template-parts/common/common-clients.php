@@ -47,8 +47,8 @@
             <!-- Add Pagination -->
             <div class="swiper-pagination swiper-pagination2 swiper-pagination-white u-absolute u-top-0 u-left-0 left-align"></div>
             <!-- Add Navigation -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev swiper-button-f4p-hlight"></div>
+            <div class="swiper-button-next swiper-button-f4p-hlight"></div>
         </section><!-- / client logo slider -->
     </section><!-- / gm fixed width container -->
 </section><!-- / clients -->
