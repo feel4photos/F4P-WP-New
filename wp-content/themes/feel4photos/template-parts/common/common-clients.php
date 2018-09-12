@@ -39,7 +39,7 @@
                 ?>
                 <div class="swiper-slide u-oflowhidden">
                     <div class="swiper-zoom-container">
-                        <?php the_post_thumbnail('full', array('class' => 'u-height100 u-width100 u-objfit-contain u-obj-pos-center-middle')); ?>
+                        <?php the_post_thumbnail('full', array('class' => 'u-height100 u-width50 u-objfit-contain u-obj-pos-center-middle')); ?>
                     </div>
                 </div>
                 <?php endwhile; wp_reset_query(); ?>
