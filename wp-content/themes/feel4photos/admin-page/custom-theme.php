@@ -318,6 +318,17 @@ add_option('social_link','');
       <td colspan="5"></td>
     </tr>
   </table>
+
+
+  <h3>Google Analytics</h3>
+  <table class="form-table" id="socialicon_table">
+    <tr>
+      <td>Analytics</td>
+      <td colspan="4"><input type="text" name="ganalyticslink" id="ganalyticslink" value="<?php echo get_option('google_analytics');?>" placeholder="Google Analytics" style="width: 30%; margin-bottom: 10px;" />
+      </td>
+    </tr>
+  </table>
+
   <input type="submit" id="submit" name="submit1" value="Save Changes" class="button button-primary" />
   <input type="reset" id="reset" name="reset" value="Reset Changes" class="button button-primary resetBotton" />
 </form>
@@ -644,6 +655,8 @@ add_option('social_link','');
 
 		$weblink = get_option ('webLink');
 
+        $ganalytics = get_option ('google_analytics');
+
 
 		if(empty($fb_link)) {
 			delete_option( 'facebook_link' );
@@ -791,6 +804,15 @@ add_option('social_link','');
 		} else {
 			update_option( 'webLink', $website );
 		}
+
+
+        if(empty($ganalytics)) {
+            delete_option( 'google_analytics' );
+            add_option( 'google_analytics', $ganalyticslink, '', 'yes' );
+        } else {
+            update_option( 'google_analytics', $ganalyticslink );
+
+        }
 
 
 		$location = site_url()."/wp-admin/themes.php?page=custom_theme"; //meta refresh
